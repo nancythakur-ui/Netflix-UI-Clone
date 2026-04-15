@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamX Pro</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">StreamX</div>
+
+  <input type="text" id="searchBar" placeholder="Search movies..." onkeyup="searchMovies()">
+
+  <div class="nav-links">
+    <span>Home</span>
+    <span>Movies</span>
+    <span>Series</span>
+    <span onclick="showLogin()">Login</span>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-content">
+    <h1 id="heroTitle">Avengers Endgame</h1>
+    <p id="heroDesc">The epic conclusion of Marvel's Infinity Saga.</p>
+
+    <!-- ✅ FIXED (with correct TMDB ID) -->
+    <button class="btn play"
+      onclick="openMovie(299534, 'Avengers Endgame', '8.4', 'The epic conclusion of Marvel saga')">
+      ▶ Play
+    </button>
+
+    <button class="btn info"
+      onclick="openMovie(299534, 'Avengers Endgame', '8.4', 'The epic conclusion of Marvel saga')">
+      More Info
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Trending</h2>
+
+  <div class="row-wrapper">
+
+    <!-- LEFT BUTTON -->
+    <button class="scroll-btn left" onclick="scrollLeft()">❮</button>
+
+    <!-- MOVIE LIST -->
+    <div class="row-posters" id="movieList"></div>
+
+    <!-- RIGHT BUTTON -->
+    <button class="scroll-btn right" onclick="scrollRight()">❯</button>
+
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div class="login-modal" id="loginModal">
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="login-btn">Login</button>
+    <p onclick="closeLogin()">Close</p>
+  </div>
+</div>
+
+<!-- VIDEO (YouTube Trailer) -->
+<div class="video-modal" id="videoModal">
+  <div class="video-box">
+    <span onclick="closeVideo()" class="close">❌</span>
+    <iframe id="videoFrame" width="100%" height="400" frameborder="0" allow="autoplay"></iframe>
+  </div>
+</div>
+
+<!-- INFO MODAL -->
+<div class="info-modal" id="infoModal">
+  <div class="info-box">
+    <h2 id="movieTitle">Movie</h2>
+    <p id="movieGenre"></p>
+    <p id="movieRating"></p>
+
+    <button class="btn play" onclick="playFromInfo()">▶ Play</button>
+    <button class="btn info" onclick="closeInfo()">Close</button>
+  </div>
+</div>
+
+<!-- HOVER PREVIEW -->
+<div class="hover-preview" id="hoverPreview">
+  <h3 id="hoverTitle"></h3>
+  <p id="hoverRating"></p>
+</div>  
+
+<!-- Footer -->
+<div class="footer">
+  © 2026 StreamX Pro | Nancy
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
