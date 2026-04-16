@@ -25,11 +25,6 @@ This project uses TMDB API to fetch real-time trending movies and display traile
 
 ---
 
-## 📸 Screenshots
-
-(Add your project screenshots here)
-
----
 
 ## ⚙️ Setup Instructions
 
